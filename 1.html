@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>过度</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+            transition-property: width,height,background-color;
+            transition-duration: 5s;
+            transition-delay: 3s;
+
+		}
+		div:hover{
+			width: 500px;
+			height: 600px;
+			background-color: green;
+			/*transition-duration: 5s;*/
+		}
+		ul{
+			width: 600px;
+			height: 600px;
+		}
+		li{
+			width: 100px;
+			height: 50px;
+			background-color: blue;
+			margin-bottom: 10px;
+			list-style:none;
+			transition-property: margin-left;
+			transition-duration: 1s;
+		}
+		li:hover nth-child(1){
+			transition-timing-function: linear;
+		}
+		li: nth-child(2) {
+			transition-timing-function: ease;
+		}
+		li: nth-child(3){
+			transition-timing-function: 默认;
+		}
+		li: nth-child(4){
+			transition-timing-function: ease-in;
+		}
+		li: nth-child(5){
+			transition-timing-function: ease-out;
+		}
+		li: nth-child(6){
+			transition-timing-function: ease-in-out;
+		}
+
+	</style>
+</head>
+<body>
+	<div></div>
+	<ul>
+		<li>linear</li>
+		<li>ease</li>
+		<li>默认</li>
+		<li>ease-in</li>
+		<li>ease-out</li>
+		<li>ease-in-out</li>
+	</ul>
+</body>
+</html>
